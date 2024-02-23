@@ -15,7 +15,7 @@ pipeline {
                 sh '''#!/bin/bash
                 echo 'Test Step: We run testing tool like pytest here'
 
-                eval "$(conda shell.bash hook)"
+                source /root/miniconda3/condabin/conda.sh
                 conda activate mlip
                 pytest
 
