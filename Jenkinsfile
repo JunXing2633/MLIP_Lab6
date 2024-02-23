@@ -15,13 +15,11 @@ pipeline {
                 sh '''#!/bin/bash
                 echo 'Test Step: We run testing tool like pytest here'
 
-                # Assuming Jenkins user has the appropriate permissions
-                # Initialize Conda in this shell session
-                eval "$(/root/miniconda3/bin/conda shell.bash hook)"
+                # TODO fill out the path to conda here
+                /root/miniconda3/condabin/conda init
 
-                # Activate the environment and run pytest
-                conda activate mlip
-                pytest
+                # TODO Complete the command to run pytest
+                /root/miniconda3/condabin/conda run -n mlip pytest
 
                 echo 'pytest not runned'
                 exit 1 #comment this line after implementing Jenkinsfile
