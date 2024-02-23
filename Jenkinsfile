@@ -15,15 +15,7 @@ pipeline {
                 sh '''#!/bin/bash
                 echo 'Test Step: We run testing tool like pytest here'
 
-                # TODO fill out the path to conda here
-                #sudo /root/miniconda3/condabin/conda init
-
-                # TODO Complete the command to run pytest
-                #sudo /root/miniconda3/condabin/conda run -n mlip pytest
-
                 eval "$(conda shell.bash hook)"
-
-                # Activate the environment and run pytest
                 conda activate mlip
                 pytest
 
